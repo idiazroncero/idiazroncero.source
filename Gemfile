@@ -9,4 +9,5 @@ group :jekyll_plugins do
 	gem 'octopress-ink'
 	gem 'octopress-filters'
 	gem 'octopress-feeds'
+	gem 'octopress-debugger'
 end
