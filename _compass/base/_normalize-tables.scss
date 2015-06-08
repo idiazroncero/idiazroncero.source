@@ -1,0 +1,34 @@
+// Dependencies.
+@import 'normalize';
+
+// Tables
+//
+// The table element displays tabular data in rows, columns, and cells.
+
+table {
+  // Add vertical rhythm margins.
+  @include leader(1);
+  @include trailer(1);
+  // Remove most spacing between table cells.
+  border-collapse: collapse;
+  border-spacing: 0;
+  // Prevent cramped-looking tables
+  width: 100%;
+  // Fuente legible
+  font-family:$sans-serif;
+  @include adjust-font-size-to($h5);
+}
+
+td,
+th {
+  padding: 0;
+}
+
+thead {
+	text-align:left;
+	th {
+		border-top:1px solid $gris_medio;
+		border-bottom:1px solid $gris_medio;
+		border-right:3px solid transparent;
+	}
+}

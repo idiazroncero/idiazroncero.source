@@ -1,0 +1,154 @@
+// Configuración inicial del proyecto + librerías + mixins
+
+
+//============
+// VARIABLES
+//============
+
+
+//=========================================================
+// 0 - Defaults de Compass
+
+$debug-browser-support: true; // Para saber por qué se omiten o incluyen prefijos
+$default-box-sizing: border-box; // No hay que olvidarse de incluir el polyfill
+$box-sizing-polyfill-path: '/path/to/boxsizing.htc';
+
+
+//=========================================================
+// 1 - Tipografía y ritmo vertical
+
+// Tipografias genéricas
+$sans-serif: Helvetica, Arial, sans-serif;
+$serif: Georgia, Times News Roman, Times, serif;
+$slab-serif: Bitter, serif;
+$monospace: Courier, monospace;
+
+$lora: Lora, Georgia, serif;
+$josefin-slab: "Josefin Slab", Times News Roman, serif;
+$josefin-sans: "Josefin Sans", Helvetica, Arial, sans-serif;
+
+// Tipografías usadas en la web
+$fuente-body: $josefin-sans;
+$fuente-titular: $lora;
+$fuente-titular2: $josefin-slab;
+$fuente-forms: $sans-serif;
+
+// Tamaño de fuente y ritmo vertical
+$base-font-size: 18px;
+$base-line-height: 27px;
+$rhythm-unit: 'rem';
+$rem-with-px-fallback: true;
+$round-to-nearest-half-line: true;
+
+// Indentación
+$indent-amount: rhythm(1);
+
+// Headings
+
+$h1: 3 * $base-font-size;
+$h1-2: 2.66 * $base-font-size;
+$h2: 2.33 * $base-font-size;
+$h2-3: 2 * $base-font-size;
+$h3: 1.66 * $base-font-size;
+$h3-4: 1.33 * $base-font-size;
+$h4: 1 * $base-font-size;
+$h4-5: 0.9 * $base-font-size;
+$h5: 0.8 * $base-font-size;
+$h5-6: 0.7 * $base-font-size;
+$h6: 0.65 * $base-font-size;
+
+
+// =======================================================
+// 2 - Colores
+
+// Tabla de colores
+$blanco:                  #fff;
+$humo:       #eee;
+
+$gris-claro:             #ddd;
+$gris-medio_claro:      #ccc;
+$gris-medio:            #999;
+$gris-oscuro:              #666;
+
+$tinta:        #333;
+$negro:                  #000;
+
+$rojo: red;
+$azul: blue;
+$verde: green;
+
+// Usos de los colores en web
+
+$link: $negro;
+$link-hover: $gris-oscuro;
+$link-visited: $negro;
+
+$invert-link: $blanco;
+$invert-link-hover: $humo;
+$invert-link-visited: $blanco;
+
+
+// =======================================================
+// 3 - Susy grid
+
+// Valores globales por defecto
+
+$susy: (
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  container: 960,
+  container-position: center,
+  columns: 24,
+  gutters: 1,
+  column-width: false,
+  global-box-sizing: border-box,
+  last-flow: to,
+  debug: (
+    image: show,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: true,
+    rem: true,
+    breakpoint: true,
+  )
+);
+
+
+// =======================================================
+// 4 - Breakpoints
+
+// De momento copiamos los ejemplos de breakpoint-sass.com
+
+// assume min-width (by default) if only a number
+$medio: 600px;
+$grande: 1000px;
+
+$surfboard-width: max-width 1000px;
+// string tests together within parentheses, assume each item is a feature value pair
+$surfboard-height: (min-height 1000px) (orientation portrait);
+
+
+
+// ===========================================
+// Parciales compartidos y librerías externas
+// ===========================================
+
+// Compass
+
+@import "compass/support"; // Cross-browser support
+@import "compass/css3"; // Prefixes de CSS3
+@import "compass/typography"; // Helpers para texto
+
+// Otras librerías
+@import "susy";
+// @import "breakpoint"; // Tenemos un problema de dependencias
+
+// Personalizado
+@import "init/mixins";

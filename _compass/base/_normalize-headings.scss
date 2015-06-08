@@ -1,0 +1,72 @@
+// Dependencies.
+@import 'normalize';
+
+// Headings
+//
+// All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>,
+// are available. <code>%h1</code> through <code>%h6</code> classes are also
+// available, for when you want to match the font styling of a heading but still
+// want your text to be displayed inline.
+
+// Address variable `h1` font-size and margin within `section` and `article`
+// contexts in Firefox 4+, Safari, and Chrome.
+h1, %h1 {
+  // Set the font-size and line-height while keeping a proper vertical rhythm.
+  @include adjust-font-size-to($h1);
+
+  // Set 1 unit of vertical rhythm on the top and bottom margins.
+  @include leader(1);
+  @include trailer(1);
+  font-family:$fuente-titular;
+  font-weight:700;
+  @extend %antialiased;
+  // En paginas de admin, que no sea grande
+  .admin-page #content & {
+    @include adjust-font-size-to($h3);
+    text-align:left;
+    background:$negro;
+    color:$blanco;
+    padding: 0 rhythm(.5);
+  }
+}
+
+h2,
+%h2 {
+  @include adjust-font-size-to($h2);
+  @include leader(1);
+  @include trailer(1);
+  font-family:$fuente-titular2;
+  font-weight:400;
+}
+
+h3,
+%h3 {
+  @include adjust-font-size-to($h3);
+  @include leader(1);
+  @include trailer(1);
+  font-family:$fuente-titular2;
+}
+
+h4,
+%h4 {
+  @include adjust-font-size-to($h4);
+  @include leader(1);
+  @include trailer(1);
+   font-family:$fuente-titular2;
+}
+
+h5,
+%h5 {
+  @include adjust-font-size-to($h5);
+  @include leader(1);
+  @include trailer(1);
+  font-family:$fuente-titular2;
+}
+
+h6,
+%h6 {
+  @include adjust-font-size-to($h6);
+  @include leader(1);
+  @include trailer(1);
+  font-family:$fuente-titular2;
+}

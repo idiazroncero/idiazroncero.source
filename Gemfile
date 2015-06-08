@@ -6,8 +6,12 @@ gem 'jekyll'
 group :jekyll_plugins do
 	gem 'octopress'
 	gem 'octopress-deploy'
-	gem 'octopress-ink'
 	gem 'octopress-filters'
 	gem 'octopress-feeds'
 	gem 'octopress-debugger'
+	gem 'jekyll-compass'
 end
+
+# Para compass 
+# gem "breakpoint", "~>2.4.0"
+gem 'susy'

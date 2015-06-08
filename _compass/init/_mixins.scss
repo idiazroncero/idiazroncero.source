@@ -1,0 +1,50 @@
+@mixin peque($fuente:$fuente-body, $tamanho:$h5, $text-transform:uppercase) {
+	@if $fuente != $fuente-body {
+		font-family:$fuente
+	}
+	@include adjust-font-size-to($tamanho);
+	text-transform:$text-transform;
+}
+
+@function pordiez($valor) {
+	@return $valor * 10px;
+}
+
+@mixin boton($color:#666) {
+	display:block;
+	border:rhythm(.25) solid $color;
+	background: $blanco;
+	padding:rhythm(.25);
+	&:hover {
+		background:$color;
+	}
+	text-transform:uppercase;
+	font-weight:bold;
+	text-align:center;
+	margin-bottom:rhythm(1);
+	cursor:pointer;
+}
+
+@mixin invert-link() {
+	&:link {
+	  color: $invert-link;
+	  text-decoration: none;
+	}	
+
+	&:visited {
+	  color: $invert-link-visited;
+	  text-decoration: none;
+	}	
+
+	&:hover,
+	&:focus {
+	  color: $invert-link-hover;
+	  text-decoration: none;
+	}
+}
+
+%antialiased {
+	@include text-shadow(0 0 1px rgba(0,0,0,0.3));
+	-webkit-font-smoothing:antialiased;
+	font-smooth: always;
+}
