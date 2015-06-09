@@ -23,19 +23,20 @@ $serif: Georgia, Times News Roman, Times, serif;
 $slab-serif: Bitter, serif;
 $monospace: Courier, monospace;
 
-$lora: Lora, Georgia, serif;
-$josefin-slab: "Josefin Slab", Times News Roman, serif;
-$josefin-sans: "Josefin Sans", Helvetica, Arial, sans-serif;
-
+$cabin: Cabin, Helvetica, serif;
+$calendas: 'Calendas Plus', Georgia, serif;
+$nexa: 'Nexa Light', $sans-serif;
+$mandali: 'Mandali';
+$raleway: 'Raleway';
 // Tipografías usadas en la web
-$fuente-body: $josefin-sans;
-$fuente-titular: $lora;
-$fuente-titular2: $josefin-slab;
+$fuente-body: $calendas;
+$fuente-titular: $raleway;
+$fuente-titular2: $raleway;
 $fuente-forms: $sans-serif;
 
 // Tamaño de fuente y ritmo vertical
-$base-font-size: 18px;
-$base-line-height: 27px;
+$base-font-size: 20px;
+$base-line-height: 30px;
 $rhythm-unit: 'rem';
 $rem-with-px-fallback: true;
 $round-to-nearest-half-line: true;
@@ -97,10 +98,10 @@ $susy: (
   math: fluid,
   output: float,
   gutter-position: inside,
-  container: 960,
+  container:768px,
   container-position: center,
-  columns: 24,
-  gutters: 1,
+  columns: 6,
+  gutters: 1/2,
   column-width: false,
   global-box-sizing: border-box,
   last-flow: to,

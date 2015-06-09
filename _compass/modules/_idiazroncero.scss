@@ -1,0 +1,35 @@
+.idr {
+	@include pie-clearfix();
+	span {
+		display:inline-block;
+		@include adjust-font-size-to(6* $base-font-size);
+	}
+	a {
+		&:hover, &:focus, &:active, &:visited {
+			color:$negro;
+		}	
+	}
+	&:hover {
+		.idr-idi, .idr-idia, .idr-idiaz, .idr-idiaz_ro, .idr-idiaz_ron, .idr-idiaz_ronc, .idr-idiaz_ronce, .idr-idiaz_roncer, .idr-idiaz_roncero {
+			max-width:999px;
+			@include opacity(1);
+			color:$negro;
+		}
+	}
+}
+
+.idr-idi, .idr-idia, .idr-idiaz, .idr-idiaz_ro, .idr-idiaz_ron, .idr-idiaz_ronc, .idr-idiaz_ronce, .idr-idiaz_roncer, .idr-idiaz_roncero {
+	max-width:0;
+	@include opacity(0);
+	@include transition(all 1s ease-in-out);
+}
+
+.idr-idi {@include transition-delay(0s); color:yellow;}
+.idr-idia {@include transition-delay(0.12s); color:green;}
+.idr-idiaz {@include transition-delay(0.24s); color:red;}
+.idr-idiaz_ro {@include transition-delay(0.36s); color:brown;}
+.idr-idiaz_ron {@include transition-delay(0.48s); color:gray;}
+.idr-idiaz_ronc {@include transition-delay(0.62s); color:wheat;}
+.idr-idiaz_ronce {@include transition-delay(0.74s); color:lime;}
+.idr-idiaz_roncer {@include transition-delay(0.86s); color:pink;}
+.idr-idiaz_roncero {@include transition-delay(1s); color:purple;}

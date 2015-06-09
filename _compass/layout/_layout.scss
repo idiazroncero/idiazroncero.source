@@ -1,0 +1,20 @@
+body {
+	text-rendering: optimizeLegibility;
+	text-align:center;
+}
+
+.container {
+	@include container();
+	background:none !important;
+}
+
+h1, h2 {
+	-webkit-font-smoothing:antialiased;
+}
+
+ul {
+	padding:0;
+	li {
+		list-style-type:none;
+	}
+}
