@@ -1,0 +1,18 @@
+.social-bar {
+	text-align:right;
+	border-bottom:1px solid $gris_medio;
+	.fa {
+		display:inline-block;
+		@include adjust-font-size-to($h5-6,0.5);
+		padding-left:4px;
+		margin-left:4px;
+		border-left:1px solid $gris_medio;
+	}
+}
+
+.social-motto {
+	float:left;
+	@include adjust-font-size-to($h5-6);
+	color:$gris_medio;
+	margin:0;
+}

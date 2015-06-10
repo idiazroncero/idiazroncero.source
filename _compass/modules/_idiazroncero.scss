@@ -1,20 +1,29 @@
 .idr {
 	@include pie-clearfix();
-	span {
-		display:inline-block;
-		@include adjust-font-size-to(6* $base-font-size);
-		font-weight:500;
-	}
+	margin:rhythm(0.5) 0 rhythm(1) 0;
+	padding:rhythm(0.5) 0 rhythm(0.25) 0; // Compensamos el extraño line-height
 	a {
 		&:hover, &:focus, &:active, &:visited {
 			color:$negro;
 		}	
+		span {
+			display:inline-block;
+			@include adjust-font-size-to(6* $base-font-size, 4);
+			font-weight:300;
+		}
+	}
+	h1 {
+		margin:0;
 	}
 	&:hover {
 		.idr-idi, .idr-idia, .idr-idiaz, .idr-idiaz_ro, .idr-idiaz_ron, .idr-idiaz_ronc, .idr-idiaz_ronce, .idr-idiaz_roncer, .idr-idiaz_roncero {
 			max-width:999px;
 			@include opacity(1);
-			color:$gris_oscuro;
+			color:$gris_medio_claro;
+		}
+		.idr-motto {
+			@include opacity(1);
+			max-height:999px;
 		}
 	}
 
@@ -42,4 +51,36 @@
 	.idr-idiaz_roncer,
 	.idr-idiaz_roncero {font-weight:300}
 
+}
+
+.idr-motto {
+	@include adjust-font-size-to($h3-4,1);
+	font-family:$fuente-body;
+	font-weight:normal;
+	display:block;
+	color:$gris_oscuro;
+	max-height:0;
+	@include opacity(0);
+	@include transition(all 1s ease-in-out 1s);
+}
+
+.idr-separador {
+	position:relative;
+	hr {
+		position:absolute;
+		margin:0;
+		width:33%;
+		top:50%;
+		left:50%;
+		@include transform(translateX(-50%));
+		border:none;
+		border-bottom:2px dotted $gris_medio_claro;
+	}
+	span {
+		padding-top:5px; // Corrige el efecto de line-height
+		@include adjust-font-size-to($h1);
+		@include transform(rotate(90deg));
+		display:inline-block; // Necesitado por transform
+		background:$blanco;
+	}
 }
