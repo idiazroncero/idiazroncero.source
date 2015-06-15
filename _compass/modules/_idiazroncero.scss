@@ -1,11 +1,11 @@
 .idr {
 	@include pie-clearfix();
-	margin:rhythm(0.5) 0 rhythm(1) 0;
-	padding:rhythm(0.5) 0 rhythm(0.25) 0; // Compensamos el extraño line-height
+	margin:rhythm(0.5) 0 0 0;
+	padding:rhythm(0.5) 0 0 0; // Compensamos el extraño line-height
 	a {
 		&:hover, &:focus, &:active, &:visited {
 			color:$negro;
-		}	
+		}
 		span {
 			display:inline-block;
 			@include adjust-font-size-to(6* $base-font-size, 4);
@@ -31,7 +31,7 @@
 		max-width:0;
 		@include opacity(0);
 		@include transition(all 1s ease-in-out);
-	}	
+	}
 
 	.idr-idi {@include transition-delay(0s); color:yellow;}
 	.idr-idia {@include transition-delay(0.12s); color:green;}
@@ -65,22 +65,23 @@
 }
 
 .idr-separador {
-	position:relative;
-	hr {
-		position:absolute;
-		margin:0;
-		width:33%;
+	 position:relative;
+	 hr {
+	 	position:absolute;
+	 	margin:0;
+	 	width:33%;
 		top:50%;
-		left:50%;
-		@include transform(translateX(-50%));
-		border:none;
-		border-bottom:2px dotted $gris_medio_claro;
+	 	left:50%;
+	// 	@include transform(translateX(-50%));
+	 	border:none;
+	 	border-bottom:2px dotted $gris_medio_claro;
 	}
-	span {
-		padding-top:5px; // Corrige el efecto de line-height
-		@include adjust-font-size-to($h1);
-		@include transform(rotate(90deg));
-		display:inline-block; // Necesitado por transform
-		background:$blanco;
+	 span {
+	 	padding-bottom:5px; // Corrige el efecto de line-height
+	 	@include adjust-font-size-to($h1);
+	// 	//@include transform(rotate(90deg));
+	 	display:inline-block; // Necesitado por transform
+	// 	background:$blanco;
+	// 	color:$gris_medio_claro;
 	}
 }

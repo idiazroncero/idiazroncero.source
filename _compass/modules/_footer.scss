@@ -1,0 +1,27 @@
+footer {
+	margin:rhythm(1) 0;
+	padding-top:rhythm(1);
+	border-top:1px solid $gris_medio;
+	@include pie-clearfix();
+}
+
+.footer-descripcion {
+	@include span(2 no-gutters);
+	@include adjust-font-size-to($h5-6,0.5);
+	text-align:left;
+	p {
+		margin:0;
+	}
+}
+
+.footer-reconocimientos {
+	@include span(2 no-gutters);
+	@include push(2);
+	@include adjust-font-size-to($h7);
+	font-family:$sans-serif;
+	text-align:right;
+	p {
+		margin:0;
+	}
+}
+

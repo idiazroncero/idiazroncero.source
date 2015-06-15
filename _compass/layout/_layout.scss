@@ -1,12 +1,22 @@
 body {
-	text-rendering: optimizeLegibility;
 	text-align:center;
+	text-rendering: optimizeLegibility;
+	-webkit-font-variant-ligatures: common-ligatures;
+	font-variant-ligatures: common-ligatures;
 }
 
 .container {
 	@include container();
 	background:none !important;
 }
+
+header, .content, footer {
+	@include span(6 no-gutters);
+}
+
+// footer {
+// 	@include span(6);
+// }
 
 h1, h2 {
 	-webkit-font-smoothing:antialiased;

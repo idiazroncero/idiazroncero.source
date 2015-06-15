@@ -1,40 +1,50 @@
 <header class="header">
-    <div class="social-bar">
-      <p class="social-motto">idiazroncero.com</p> 
-      <a href="" class="fa fa-github"></a><a href="" class="fa fa-twitter"></a><a href="" class="fa fa-linkedin"></a>
-    </div>
-
-    <div class="idr" >
-      <h1><a href="{{ site.baseurl }}/"><span class="idr-i">i</span><span class="idr-id">d</span><span class="idr-idi">i</span><span class="idr-idia">a</span><span class="idr-idiaz">z</span><span class="idr-idiaz_">.</span><span class="idr-idiaz_r">r</span><span class="idr-idiaz_ro">o</span><span class="idr-idiaz_ron">n</span><span class="idr-idiaz_ronc">c</span><span class="idr-idiaz_ronce">e</span><span class="idr-idiaz_roncer">r</span><span class="idr-idiaz_roncero">o</span>
-      </a></h1>
-      <span class="idr-motto">Diseño web, periodismo, política y otras parafilias</span>
-      <div class="idr-separador"><hr/><span>{</span></div>
-    </div>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-      </a>
-
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-
-<!--       <div class="secciones">
-        {% for category in site.categories %}
-          <p>{{ category | first }}</p>
-        {% endfor %}
-      </div> -->
-    </nav>
-  <script>
-    $(function(){
-      $(window).load(function(){
-        $('.idr-idi, .idr-idia, .idr-idiaz, .idr-idiaz_ro, .idr-idiaz_ron, .idr-idiaz_ronc, .idr-idiaz_ronce, .idr-idiaz_roncer, .idr-idiaz_roncero').hide();
-        $('.idr-idi, .idr-idia, .idr-idiaz, .idr-idiaz_ro, .idr-idiaz_ron, .idr-idiaz_ronc, .idr-idiaz_ronce, .idr-idiaz_roncer, .idr-idiaz_roncero').show();
-      });
-    })
-  </script>
+	<div class="social-bar">
+		<p class="social-motto">idiazroncero.com | versión 0.1</p>
+		{% if site.github_username %}
+			<a href="https://github.com/{{ site.github_username }}" class="fa fa-github"></a><!--
+		{% endif %}
+		{% if site.twitter_username %}
+			--><a href="https://twitter.com/{{ site.twitter_username }}" class="fa fa-twitter"></a><!--
+		{% endif %}
+		{% if site.linkedin_username %}
+			--><a href="https://linkedin.com/{{ site.linkedin_username }}" class="fa fa-linkedin"></a><!--
+		{% endif %}
+		Truco para evitar el problema con inline-block-->
+	</div>
+	<div class="idr" >
+		<h1>
+			<a href="{{ site.baseurl }}/">
+				<span class="idr-i">i</span><span class="idr-id">
+				d</span><span class="idr-idi">i</span><span class="idr-idia">
+				a</span><span class="idr-idiaz">
+				z</span><span class="idr-idiaz_">
+				.</span><span class="idr-idiaz_r">
+				r</span><span class="idr-idiaz_ro">
+				o</span><span class="idr-idiaz_ron">
+				n</span><span class="idr-idiaz_ronc">
+				c</span><span class="idr-idiaz_ronce">
+				e</span><span class="idr-idiaz_roncer">
+				r</span><span class="idr-idiaz_roncero">
+				o</span>
+			</a>
+		</h1>
+	<span class="idr-motto">Diseño web, periodismo, política y otras parafilias</span>
+</div>
+<!-- <nav class="site-nav">
+	<a href="#" class="menu-icon">
+	</a>
+	<div class="trigger">
+		{% for page in site.pages %}
+			{% if page.title %}
+				<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div class="secciones">
+		{% for category in site.categories %}
+			<p>{{ category | first }}</p>
+		{% endfor %}
+	</div>
+</nav> -->
 </header>

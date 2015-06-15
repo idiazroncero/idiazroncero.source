@@ -10,8 +10,9 @@ group :jekyll_plugins do
 	gem 'octopress-feeds'
 	gem 'octopress-debugger'
 	gem 'jekyll-compass'
+	gem 'jekyll-auto-image'
 end
 
-# Para compass 
+# Para compass
 # gem "breakpoint", "~>2.4.0"
 gem 'susy'
