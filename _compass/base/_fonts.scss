@@ -53,3 +53,26 @@
   font-weight: normal;
   font-style: italic;
 }
+
+@font-face {
+  font-family: 'Nexa';
+  src: font-url("nexa_light-webfont.eot");
+  src: font-url("nexa_light-webfont.eot?iefix") format('eot'),
+    font-url("nexa_light-webfont.woff") format('woff'),
+    font-url("nexa_light-webfont.ttf") format('truetype'),
+    font-url("nexa_light-webfont.eot#webfontOkOndcij") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: font-url("nexa_bold-webfont.eot");
+  src: font-url("nexa_bold-webfont.eot?iefix") format('eot'),
+    font-url("nexa_bold-webfont.woff") format('woff'),
+    font-url("nexa_bold-webfont.ttf") format('truetype'),
+    font-url("nexa_bold-webfont.eot#webfontOkOndcij") format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
