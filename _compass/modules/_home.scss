@@ -1,68 +1,11 @@
 .post-list {
 	margin:0;
 	padding:0;
+
+	// CSS Genérico
 	.post-item {
 		position:relative;
 		overflow:hidden;
-	}
-	// Posicionamiento en 1/2/3
-	.post-item-1 {
-		color:$blanco;
-		@include span(6 no-gutters);
-		margin-bottom:rhythm(1);
-		.post-texto {
-			position:absolute;
-			right:5%;
-			top:50%;
-			width:40%;
-			padding:rhythm(0.5);
-			background:rgba(0,0,0,.75);
-			@include transition(all 1s ease-out);
-			@include transform(translateY(-50%));
-		}
-		h2 {
-			@include adjust-font-size-to($h3,1.25);
-			//font-weight:bold;
-			font-style:italic;
-			text-transform:lowercase;
-		}
-	}
-	.post-item-2, .post-item-3 {
-		@include span(3 no-gutters);
-		img {
-			padding-bottom:rhythm(0.5);
-			margin-bottom:rhythm(0.25);
-			border-bottom:1px dotted $gris_claro;
-		}
-		h2 {
-			@include adjust-font-size-to($h3-4,1.25);
-			font-style:italic;
-		}
-		.post-fecha {
-			@include adjust-font-size-to($h5);
-		}
-	}
-	.post-item-2 {
-		padding-right:rhythm(0.5);
-		border-right:1px solid $gris_claro;
-	}
-	.post-item-3 {
-		padding-left:rhythm(0.5);
-	}
-	// Si el post tiene imagen
-	.post-item--image {
-		img {
-			display:block;
-			width:100%;
-			max-width:100%;
-			@include opacity(0.75);
-			@include transition(all 0.5s ease-in-out);
-		}
-		&:hover {
-			img {
-				@include opacity(1);
-			}
-		}
 		h2 {
 			font-family:$fuente-body;
 			// font-style:italic;
@@ -80,5 +23,125 @@
 	.post-separador {
 		@include adjust-font-size-to($h3);
 		color:$gris_oscuro;
+	}
+
+	// Posicionamiento en 1/2/3
+	.post-item-1 {
+		color:$blanco;
+		@include span(6 no-gutters);
+		margin-bottom:rhythm(1);
+		h2 {
+			@include adjust-font-size-to($h2,1.25);
+		}
+		.post-fecha {
+			@include adjust-font-size-to($h5);
+		}
+	}
+	.post-item-2, .post-item-3 {
+		@include span(3 no-gutters);
+		h2 {
+			@include adjust-font-size-to($h3-4,1.25);
+			font-style:italic;
+		}
+		.post-fecha {
+			@include adjust-font-size-to($h6);
+		}
+	}
+	.post-item-2 {
+		padding-right:rhythm(0.5);
+		border-right:1px solid $gris_claro;
+	}
+	.post-item-3 {
+		padding-left:rhythm(0.5);
+	}
+
+	// Si el post tiene imagen
+	.post-item--image {
+		img {
+			display:block;
+			width:100%;
+			max-width:100%;
+			@include opacity(0.75);
+			@include transition(all 0.5s ease-in-out);
+		}
+		&:hover {
+			img {
+				@include opacity(1);
+			}
+		}
+		&.post-item-1 {
+			.post-texto {
+				position:absolute;
+				right:5%;
+				top:50%;
+				width:40%;
+				padding:rhythm(0.5);
+				background:rgba(0,0,0,.75);
+				@include transition(all 1s ease-out);
+				@include transform(translateY(-50%));
+			}
+			h2 {
+				//font-weight:bold;
+				font-style:italic;
+				text-transform:lowercase;
+			}
+		}
+		&.post-item-2, &.post-item-3 {
+			img {
+				padding-bottom:rhythm(0.5);
+				margin-bottom:rhythm(0.25);
+				border-bottom:1px dotted $gris_claro;
+			}
+		}
+	}
+
+	// Si el post no tiene imagen
+	.post-item--plain {
+		&.post-item-1 {
+			padding:rhythm(0.5);
+			background:$negro;
+			h2 {
+				max-width:66%;
+				margin:0 auto;
+			}
+			&:before {
+				content:"—";
+				position:absolute;
+				top:48%;
+				left:rhythm(1);
+				@include transform(translateY(-50%));
+				@include adjust-font-size-to(50px);
+				color:$tinta;
+				@include transition(all 0.25s ease-out);
+				@include text-shadow(-1px -1px 1px rgba($blanco, 0.2));
+			}
+			&:after {
+				content:"—";
+				position:absolute;
+				top:48%;
+				right:rhythm(1);
+				@include transform(translateY(-50%));
+				@include adjust-font-size-to(50px,1);
+				color:$tinta;
+				@include transition(all 0.25s ease-out);
+				@include text-shadow(1px -1px 1px rgba($blanco, 0.2));
+			}
+			&:hover {
+				&:before {
+					left:rhythm(-1);
+				}
+				&:after {
+					right:rhythm(-1);
+				}
+			}
+		}
+		// &.post-item-2 {background:$gris_oscuro};
+		// &.post-item-3 {background:$gris_medio}
+		&.post-item-2, &.post-item-3 {
+			.post-texto {
+				padding:rhythm(0.5) rhythm(0.25);
+				border-top:rhythm(0.25) solid $negro;
+			}
+		}
 	}
 }

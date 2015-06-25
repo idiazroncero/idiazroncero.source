@@ -18,6 +18,9 @@
 %link {
   color: $link;
   text-decoration: none;
+  .post-content & {
+    border-bottom:1px dotted $gris-medio;
+  }
 }
 
 :visited {
@@ -29,6 +32,7 @@ a:hover,
 a:focus {
   color: $link-hover;
   text-decoration: none;
+  border-botom:none;
 }
 
 a:active {

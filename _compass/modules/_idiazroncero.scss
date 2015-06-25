@@ -65,6 +65,7 @@
 }
 
 .idr-separador {
+	@include span(6);
 	 position:relative;
 	 hr {
 	 	position:absolute;
@@ -72,16 +73,16 @@
 	 	width:33%;
 		top:50%;
 	 	left:50%;
-	// 	@include transform(translateX(-50%));
+		@include transform(translateX(-50%));
 	 	border:none;
 	 	border-bottom:2px dotted $gris_medio_claro;
 	}
 	 span {
 	 	padding-bottom:5px; // Corrige el efecto de line-height
 	 	@include adjust-font-size-to($h1);
-	// 	//@include transform(rotate(90deg));
+		@include transform(rotate(90deg));
 	 	display:inline-block; // Necesitado por transform
-	// 	background:$blanco;
-	// 	color:$gris_medio_claro;
+	 	background:$blanco;
+	 	color:$gris_medio_claro;
 	}
 }

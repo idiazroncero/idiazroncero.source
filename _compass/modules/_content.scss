@@ -1,0 +1,13 @@
+.post-content {
+	text-align:justify;
+	h2 {
+		text-align:center;
+		margin-top:rhythm(2);
+	}
+}
+
+.footnotes {
+	border-top:1px solid $gris-medio;
+	@include adjust-font-size-to($h5);
+	color:$gris-oscuro;
+}

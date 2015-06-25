@@ -23,11 +23,17 @@ layout: default
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"></a>
         </li>
       {% else %}
-        <li class="post-item post-item-{{forloop.index}}">
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-          <span class="post-fecha">{{ post.date | date: "%-d %b, %Y" }}</span> 
+        <li class="post-item post-item-{{forloop.index}} post-item--plain">
+          <div class="post-texto">
+            <div class="post-texto-inner">
+              <h2>{{ post.title }}</h2>
+              {% if forloop.index == 1 %}
+                <div class="post-separador">~</div>
+              {% endif %}
+              <div class="post-fecha">{{ post.date | date: "%-d %b, %Y" }}</div>
+            </div>
+          </div>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"></a> 
         </li>
       {% endif %}
     {% endfor %}

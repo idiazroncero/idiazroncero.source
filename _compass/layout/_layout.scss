@@ -14,6 +14,10 @@ header, .content, footer {
 	@include span(6 no-gutters);
 }
 
+.post-content {
+	@include span(6);
+}
+
 // footer {
 // 	@include span(6);
 // }
@@ -22,9 +26,9 @@ h1, h2 {
 	-webkit-font-smoothing:antialiased;
 }
 
-ul {
-	padding:0;
-	li {
-		list-style-type:none;
-	}
-}
+// ul {
+// 	padding:0;
+// 	li {
+// 		list-style-type:none;
+// 	}
+// }
