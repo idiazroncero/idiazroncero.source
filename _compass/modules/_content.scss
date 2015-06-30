@@ -11,3 +11,18 @@
 	@include adjust-font-size-to($h5);
 	color:$gris-oscuro;
 }
+
+.aviso {
+	font-style:italic;
+	i {
+		@include adjust-font-size-to($h5);
+		color:$gris-medio;
+		&:first-child {
+			margin-right:50px;
+		}
+		&:last-child {
+			margin-left:50px;
+			@include transform(rotate(180deg));
+		}
+	}
+}
