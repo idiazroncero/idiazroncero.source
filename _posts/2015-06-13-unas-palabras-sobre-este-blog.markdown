@@ -9,7 +9,7 @@ Si escribir unas líneas de presentación siempre es complicado, esto es aún m�
 
 El caso es que un blog personal, mal que me pese, está ligado necesariamente a *alguien* que afirma hacer *algo* y que, en este fuego de vanidades que es internet, tiene la osadía de considerar ese *algo* como digno del tiempo de los demás.
 
-Visto así, el formato blog es bastante insoportable. Es por ello que en las siguientes líneas intentaré defender la utilidad que quiero dar a sitio web.
+Visto así, el formato blog es bastante insoportable. Es por ello que en las siguientes líneas intentaré defender la utilidad que quiero dar a este sitio web.
 
 
 ## Quién soy
