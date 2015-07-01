@@ -10,7 +10,7 @@ group :jekyll_plugins do
 	#gem 'octopress-feeds'
 	#gem 'octopress-debugger'
 	gem 'jekyll-compass'
-	gem 'jekyll-auto-image'
+	# gem 'jekyll-auto-image'
 end
 
 # Para compass

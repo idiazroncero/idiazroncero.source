@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Cómo se hizo la animación de idiaz.roncero usando puro CSS3"
+title:  "Cómo se hizo el título de este blog: siglas y acrónimos animados usando puro CSS3"
 date:   2015-07-01 00:00:00
 categories: [diseño web]
 tags: 
