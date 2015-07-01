@@ -2,11 +2,31 @@
 	text-align:justify;
 	h2 {
 		text-align:center;
+		border-bottom:1px dotted $gris-claro;
 		margin-top:rhythm(2);
+	}
+	p code {
+		background:$tinta;
+		color:$humo;
+		padding:1px 5px;
+		@include border-radius(4px);
+		@include adjust-font-size-to($h5);
+	}
+	figure {
+		img {
+			display:block;
+		}
+		figcaption {
+			@include adjust-font-size-to($h6);
+			color:$gris-medio;
+			font-family:$sans-serif;
+			border-top:1px solid $gris-claro;
+		}
 	}
 }
 
 .footnotes {
+	margin-top:rhythm(3);
 	border-top:1px solid $gris-medio;
 	@include adjust-font-size-to($h5);
 	color:$gris-oscuro;

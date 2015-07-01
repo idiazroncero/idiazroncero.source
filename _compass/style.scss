@@ -3,6 +3,7 @@
 
 // Normalizr
 @import 'base/fonts';
+@import 'base/normalize';
 @import 'base/normalize-text';
 @import 'base/normalize-links';
 @import 'base/normalize-headings';
@@ -20,3 +21,7 @@
 @import 'modules/footer';
 @import 'modules/home';
 @import 'modules/content';
+
+// External
+
+@import 'external/syntax';

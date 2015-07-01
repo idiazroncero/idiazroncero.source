@@ -14,3 +14,5 @@ markdown: kramdown
 # compresion de html
 compress_html:
   clippings: [a, div]
+# Syntax highlighter
+highlighter: pygments
