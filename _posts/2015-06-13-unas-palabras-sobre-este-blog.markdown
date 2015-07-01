@@ -16,7 +16,7 @@ Visto así, el formato blog es bastante insoportable. Es por ello que en las sig
 
 Mi alias digital es __idiaz.roncero__. Hay poco truco: en el palabro se incluyen mi nombre y apellidos. No es muy difícil de descifrar si me conoces o investigas mi currículum.
 
-Trabajo como diseñador y desarrollador web en [El Estado Mental][eem]{:target="_blank"}, probablemente la revista cultural más arriesgada e innovadora de España. En EEM lo soy todo: desde administrador de sistemas hasta diseñador de la revista en formato App. Nunca en mi vida he aprendido tanto en tan poco tiempo. 
+Trabajo como diseñador y desarrollador web en [El Estado Mental][eem]{:target="_blank"}, probablemente la revista cultural más arriesgada e innovadora de España. En la parte web de EEM lo soy todo: desde administrador de sistemas hasta diseñador de la revista en formato App. Nunca en mi vida he aprendido tanto en tan poco tiempo. 
 
 Sin embargo, no soy desarrollador web. Ni diseñador gráfico. Siempre me interesó este mundo, pero en realidad yo quería ser escritor. Luego quise ser periodista. Luego quise ser periodista internacional. Y luego periodista internacional del mundo árabe e islámico. Tengo los títulos para demostrarlo.
 
