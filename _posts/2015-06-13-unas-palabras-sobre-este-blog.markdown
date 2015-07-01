@@ -20,7 +20,7 @@ Trabajo como diseñador y desarrollador web en [El Estado Mental][eem]{:target="
 
 Sin embargo, no soy desarrollador web. Ni diseñador gráfico. Siempre me interesó este mundo, pero en realidad yo quería ser escritor. Luego quise ser periodista. Luego quise ser periodista internacional. Y luego periodista internacional del mundo árabe e islámico. Tengo los títulos para demostrarlo.
 
-El paro y la crisis se cruzaron en mi camino. Surgió una oportunidad, y aprendí a hacer webs junto con mi amigo Carlos Barbudo. Después, yo solo. Cometiendo errores y aprendiendo de ellos. El resto está ya todo contado.
+El paro y la crisis se cruzaron en mi camino. Surgió una oportunidad, y aprendí a hacer webs junto con mi amigo Carlos Fernández Barbudo. Después, yo solo. Cometiendo errores y aprendiendo de ellos. El resto está ya todo contado.
 
 ## Para qué idiaz.roncero
 
