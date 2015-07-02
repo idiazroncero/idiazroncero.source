@@ -42,3 +42,30 @@
   <meta content="{{ tag }}" property="article:tag">
   {% endfor %}
 {% endif %}
+
+<!-- METATAGS DE TWITTER -->
+
+<meta content="@idiazroncero" name="twitter:site">
+{% if page.image %}
+  <meta content="summary_large_image" name="twitter:site">
+{% else %}
+  <meta content="summary" name="twitter:site">
+{% endif %}
+
+{% if page.title %}
+  <meta content="{{ page.title }}" name="twitter:title">
+{% else %}
+  <meta content="{{ site.title }}" name="twitter:title">
+{% endif %}
+
+{% if page.excerpt %}
+  <meta content="{{ page.excerpt | strip_html | strip_newlines | truncate: 300}}" name="twitter:description">
+{% else %}
+  <meta content="{{ site.description }}" name="twitter:description">
+{% endif %}
+
+{% if page.image %}
+  <meta content="{{ site.url }}{{ page.image }}" name="twitter:image">
+{% else %}
+  <meta content="{{site.url}}/images/default.jpg" name="twitter:image"> 
+{% endif %}

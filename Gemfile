@@ -11,6 +11,7 @@ group :jekyll_plugins do
 	#gem 'octopress-debugger'
 	gem 'jekyll-compass'
 	# gem 'jekyll-auto-image'
+	gem 'jekyll-sitemap'
 end
 
 # Para compass
