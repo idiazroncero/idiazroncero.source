@@ -1,7 +1,7 @@
 ---
 require:
 - jekyll-compass
-project_path: "/Users/nachodiaz/Sites/idiazroncero"
+project_path: "/Users/idiazroncero/localdev/idiazroncero"
 http_path: "/"
 css_dir: css
 sass_dir: _compass

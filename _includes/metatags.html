@@ -16,7 +16,9 @@
 {% else %}
   <meta content="{{ site.description }}" property="og:description">
 {% endif %}
-{% if page.url %}
+{% if page.layout == 'front' %}
+  <meta content="{{ site.url }}" property="og:url">
+{% else %}
   <meta content="{{ site.url }}{{ page.url }}" property="og:url">
 {% endif %}
 {% if page.date %}
@@ -28,9 +30,7 @@
 {% if page.image %}
   <meta content="{{ site.url }}{{ page.image }}" property="og:image">
 {% else %}
-<!-- TODO: Imagen fallback
-  <meta content="/images/idr-featured.jpg" property="og:image"> 
--->
+  <meta content="{{site.url}}/images/default.jpg" property="og:image"> 
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
