@@ -2,7 +2,7 @@
 layout: post
 title:  "Ligaduras en tipografía web"
 date:   2015-07-11 00:00:00
-categories: [diseño web]
+categories: [diseno-web]
 tags: 
 - tipografia
 - ligaduras
