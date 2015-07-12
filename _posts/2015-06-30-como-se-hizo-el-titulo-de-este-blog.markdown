@@ -31,7 +31,7 @@ Los puristas del [BEM] y [OOCSS] me matarán al ver esto, pero mi estrategia par
 
 Cada cual puede tomar aquí la estrategia de nomenclatura que mas le plazca.
 
-{% highlight html linenos %}
+{% prism markup %}
 <h1>
     <span class="u">U</span>
     <span class="un">n</span>
@@ -48,7 +48,7 @@ Cada cual puede tomar aquí la estrategia de nomenclatura que mas le plazca.
     <span class="united-nation">n</span>
     <span class="united-nations">s</span>
 </h1>
-{% endhighlight %}
+{% endprism %}
 
 Puesto que, como veremos más adelante, el 99% de la técnica consiste en __animar la propiedad `max-height`__, necesitamos que cada `span` se comporte como un elemento de tipo block[^2]. Sin embargo, declarar un simple `display:block` provocará que cada letra tome una línea diferente, rompiendo el título.
 
@@ -56,11 +56,11 @@ Una opción es flotar a la izquierda cada `span`, pero esto nos impedirá aplica
 
 Es por ello que sólo nos queda usar `display: inline-block`. Y aquí nos vamos a encontrar con el primer problema.
 
-{% highlight css linenos %}
+{% prism css %}
 h1 span {
   display:inline-block;
 }
-{% endhighlight %}
+{% endprism %}
 
 Bienvenidos a uno de los problemas más <del>coñazo</del> pesados que conozco en HTML. No voy a explicarlo entero, puesto que hay un [post excelente en CSS-tricks][inline-block]. El resultado de usar `inline block` sobre un HTML escrito *para humanos* (es decir, separando cada `span` con un salto de línea) es que aparece un indeseable espacio entre letras:
 
@@ -68,14 +68,14 @@ Bienvenidos a uno de los problemas más <del>coñazo</del> pesados que conozco e
 
 En el [enlace anteriormente citado][inline-block] tenéis varias técnicas para resolverlo. Yo suelo, o bien agolparlo todo y hacerlo ilegible:
 
-{% highlight html linenos %}
+{% prism markup  %}
 <h1>
   <span class="u">U</span><span class="un">n</span><span class="uni">i</span><span class="unit">t</span><span class="unite">e</span><span class="united">d</span>...
-{% endhighlight %}
+{% endprism %}
 
 O bien aplico el truco descrito en CSS-Tricks por el cual se "engaña" al HTML poniendo las tags de apertura y cierre de cada `span` en líneas diferentes:
 
-{% highlight html linenos %}
+{% prism markup %}
 <h1>
   <span class="u">
   U</span><span class="un">
@@ -88,7 +88,7 @@ O bien aplico el truco descrito en CSS-Tricks por el cual se "engaña" al HTML p
   N</span><span class="united-na">
   a</span><span class="united-nat">
   ...
-{% endhighlight %}
+{% endprism %}
 
 Esto debería volver el título a la normalidad y nos debería servir para pasar a la siguiente fase:
 
@@ -96,11 +96,11 @@ Esto debería volver el título a la normalidad y nos debería servir para pasar
 
 No es estrictamente obligatorio, pero el efecto gana enteros si se hace desde el centro hacia ambos extremos. Esto se consigue simplemente centrando el texto. Como decía antes, es por esto que no podíamos usar `float:left` para solucionar el problema del inline-block.
 
-{% highlight css  %}
+{% prism css  %}
 h1 {
   text-align:center;
 }
-{% endhighlight %}
+{% endprism %}
 
 Es el momento de aderezar nuestra tipografía. Quizá quieras poner todo en `uppercase`, modificar la `font-family` o usar algún efecto de `text-shadow`. Es posible que los efectos más agresivos provoquen algún problema, especialmente si aumentan el tamaño que ocupa cada letra (sombras, fondos y bordes incluídos). Como siempre, se impone el ensayo y error y cierta mesura.
 
@@ -108,7 +108,7 @@ Una vez tengamos nuestro título, es el momento de ocultar las letras que __no f
 
 Necesitamos que las propiedades CSS que vamos a modificar sean animables usando `transition`. Es por ello que debemos prescindir de dos sospechosos habituales: `display:none` y `visibility:hidden`. En su lugar, vamos a utilizar el ancho y la opacidad de cada letra:
 
-{% highlight css linenos  %}
+{% prism css   %}
 .un, 
 .uni, 
 .unit, 
@@ -124,7 +124,7 @@ Necesitamos que las propiedades CSS que vamos a modificar sean animables usando 
   max-width:0;
   opacity:0;
 }
-{% endhighlight %}
+{% endprism %}
 
 Aquí es donde alguien me dirá, con razón, que se podría simplificar esto añadiendo una clase del tipo `.oculto` a cada letra. Cierto es. A mí, personalmente, me gusta añadir este extra de trabajo a cambio de poder añadir y quitar letras del efecto directamente desde el CSS.
 
@@ -142,20 +142,20 @@ Dicho esto, toda la magia de este efecto reside en dos líneas de CSS.
 
 La primera declara una transición sobre todos los valores de los `span`. 
 
-{% highlight css linenos  %}
+{% prism css   %}
 h1 span {
   transition: all 2s ease-in-out;
 }
-{% endhighlight %}
+{% endprism %}
 
 La segunda actúa sobre `h1:hover` y aplica a todas las letras los nuevos valores de opacidad y max-height que serán animados. No hay que preocuparse por las letras ya visibles, ya que no tienen propiedades CSS declaradas para `opacity` y `max-height` y `transition` sólo opera cuando existen valores de llegada y de partida.
 
-{% highlight css linenos  %}
+{% prism css   %}
 h1:hover span {
   max-width: 999px;
   opacity: 1;
 }
-{% endhighlight %}
+{% endprism %}
 
 Sin embargo, el efecto no resulta muy atractivo. La transición realiza en 2 segundos el cálculo de todos los valores a la vez, por lo que el resultado es un texto en el que todas las letras restantes se *estiran* y *encienden* simultáneamente (ver ejemplo):
 
@@ -170,7 +170,7 @@ Lo que falta es __hacer que las letras vayan saliendo en orden (o desorden)__, y
 
 De paso, sirve para justificar el por qué de dar a cada `span` una clase diferente.
 
-{% highlight css linenos  %}
+{% prism css   %}
 .un { transition-delay: 0.16s}
 .uni { transition-delay: 0.32s}
 .unit { transition-delay: 0.48s}
@@ -183,7 +183,7 @@ De paso, sirve para justificar el por qué de dar a cada `span` una clase difere
 .united-natio { transition-delay: 1.6s}
 .united-nation { transition-delay: 1.76s}
 .united-nations { transition-delay: 1.92s}
-{% endhighlight %}
+{% endprism %}
 
 Voilà!
 
