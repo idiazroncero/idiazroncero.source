@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ligaduras en tipografía web"
+title:  "Ligaduras en tipografía web (actualizado)"
 date:   2015-07-11 00:00:00
 categories: [diseno-web]
 tags: 
@@ -9,6 +9,8 @@ tags:
 - css
 image: /images/ligatura-muestra.png
 ---
+
+<div class="actualizado"><a href="#correccion">Actualizado el Domingo 12 de Julio a las 18:26 horas</a><br/>Motivo: el error con las ligaduras comentado se debía al modo automático de FontSquirrell</div>
 
 A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas.
 
@@ -80,13 +82,17 @@ El correcto funcionamiento de las ligaduras y la capacidad de usar entidades htm
 
 En mi caso, Calendas Plus es una excelente fuente enfocada al medio escrito que *no* viene preparada para un `@font-face`. Se descarga sólo en formato `*.otf`, y hay que realizar la conversión manualmente.
 
-Para usarla en esta web, la pasé por el conocido [Webfont Kit Generator de FontSquirrell]. En algún punto, desconozco por qué, ligaduras como la que une la ese con la te dejaron de funcionar, pese a ser ligaduras "oficiales" con su entidad HTML bien asentada y su UNICODE asignado. Si la uso, aparece lo siguiente:
+Para usarla en esta web, la pasé por el conocido [Webfont Kit Generator de FontSquirrell]. <del>En algún punto, desconozco por qué, ligaduras como la que une la ese con la te dejaron de funcionar, pese a ser ligaduras "oficiales" con su entidad HTML bien asentada y su UNICODE asignado.</del>
 
-<p style="font-size:3rem; text-align:center;" >ﬆ</p>
+<div id="correccion"></div>
 
-En lugar de:
-
-![Ligatura ST original](/images/ligaturast.png)
+> __CORRECCIÓN__
+>
+> *Para acceder a todas las ligaduras de la fuente tal y como definidas en su formato OpenType hay que usar el generador avanzado de FontSquirrell y hacerse un sub-setting manual.*
+>
+>*El proceso de escribir este post me hizo investigar un poco más y no ha sido difícil resolverlo. Mi error fue usar el modo automático de FontSquirrell. Es por eso que los siguientes párrafos han quedado obsoletos y este blog ya dispone de todas las ligaduras definidas en la tipografía.*
+>
+>*Pronto escribiré una entrada explicando cómo conseguirlo.*
 
 Lo cual nos lleva a otra pequeña frustración: Calendas Plus viene con una tonelada de ligaduras increíbles que muestran en su [página web][Calendas Plus]:
 
@@ -102,7 +108,7 @@ En definitiva, merece *mucho* la pena optar por fuentes que incluyen ligaduras, 
 
 Sin embargo, todavía queda mucho camino por recorrer para poder explotar todo el potencial creativo de las ligaduras en la tipografía web. En comparación con su uso en diseño gráfico (inDesign, Photoshop), nos encontramos con dos grandes limitaciones:
 
-* La necesidad de que los autores de la fuente acomentan el enorme trabajo de adaptar todos los formatos a la web
+* La necesidad de que los autores de la fuente acomentan el enorme trabajo de adaptar todos los formatos a la web __y que nosotros, con nuestras herramientas, realicemos un buen trabajo en la conversión y el subsetting__
 
 * Las limitaciones del UNICODE: la necesidad de trabajar con un elenco predeterminado de opciones y la imposibilidad técnica de acceder a todas las posibilidades que los autores de la tipografía hayan preparado.
 

@@ -27,6 +27,25 @@
 		display:block;
 		margin:0 auto;
 	}
+	blockquote {
+		@include adjust-font-size-to($h4-5);
+		margin:0;
+		padding:rhythm(0.5) rhythm(1);
+		border-top:rhythm(0.5) solid shade($humo, 10%);
+		background:$humo;
+		p:first-child {
+			margin-top:0;
+		}
+		p:last-child {
+			margin-bottom:0;
+		}
+	}
+	.actualizado {
+		@include adjust-font-size-to($h6,0.75);
+		text-align:center;
+		border-bottom:1px solid $negro;
+		font-family:$sans-serif;
+	}
 }
 
 .footnotes {
