@@ -17,7 +17,7 @@ $(function(){
 		var config1 = {
 		  "id": '621271209704095744',
 		  "domId": 'twitter-fetcher',
-		  "maxTweets": 3,
+		  "maxTweets": 6,
 		  "showUser": false,
 		  "showTime": false,
 		  "showImages": false,
