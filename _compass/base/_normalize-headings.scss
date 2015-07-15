@@ -34,8 +34,7 @@ h2,
   @include adjust-font-size-to($h2);
   @include leader(1);
   @include trailer(1);
-  font-family:$fuente-titular2;
-  font-weight:400;
+  font-family:$fuente-titular;
 }
 
 h3,

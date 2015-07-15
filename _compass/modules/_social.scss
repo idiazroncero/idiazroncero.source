@@ -1,6 +1,6 @@
 .social-bar {
 	text-align:right;
-	border-bottom:1px solid $gris_medio;
+	border-top:5px solid $negro;
 	.fa {
 		display:inline-block;
 		@include adjust-font-size-to($h5-6,0.5);
@@ -14,7 +14,7 @@
 	float:left;
 	position:relative;
 	p {
-		@include adjust-font-size-to($h5-6);
+		@include adjust-font-size-to($h6);
 		color:$gris_medio;
 		margin:0;
 	}

@@ -8,7 +8,7 @@
 		overflow:hidden;
 		h2 {
 			font-family:$fuente-body;
-			// font-style:italic;
+			font-weight:normal;
 			margin:0;
 		}
 		a {
@@ -29,18 +29,21 @@
 	.post-item-1 {
 		color:$blanco;
 		@include span(6 no-gutters);
-		margin-bottom:rhythm(1);
+		//margin-bottom:rhythm(1);
 		h2 {
-			@include adjust-font-size-to($h2,1.25);
+			@include adjust-font-size-to($h2-3,1.25);
 		}
 		.post-fecha {
 			@include adjust-font-size-to($h5);
+		}
+		img {
+			display:block;
 		}
 	}
 	.post-item-2, .post-item-3 {
 		@include span(3 no-gutters);
 		h2 {
-			@include adjust-font-size-to($h3-4,1.25);
+			@include adjust-font-size-to($h3-4,1);
 			font-style:italic;
 		}
 		.post-fecha {
@@ -76,7 +79,7 @@
 				top:50%;
 				width:40%;
 				padding:rhythm(0.5);
-				background:rgba(0,0,0,0.85);
+				background:rgba(0,0,0,0.9);
 				@include transition(all 1s ease-out);
 				@include transform(translateY(-50%));
 			}
@@ -87,7 +90,7 @@
 			}
 			&:hover {
 				.post-texto {
-					background:rgba(255,255,255,0.85);
+					background:rgba(255,255,255,0.9);
 					color:$negro;
 				}
 			}
@@ -148,6 +151,22 @@
 				padding:rhythm(0.5) rhythm(0.25);
 				border-top:rhythm(0.25) solid $negro;
 			}
+		}
+	}
+}
+
+// "Estamos en construccion"
+.aviso {
+	font-style:italic;
+	i {
+		@include adjust-font-size-to($h5);
+		color:$gris-medio;
+		&:first-child {
+			margin-right:50px;
+		}
+		&:last-child {
+			margin-left:50px;
+			@include transform(rotate(180deg));
 		}
 	}
 }

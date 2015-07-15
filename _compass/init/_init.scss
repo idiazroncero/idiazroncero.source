@@ -46,12 +46,12 @@ $indent-amount: rhythm(1);
 
 // Headings
 
-$h1: 2 * $base-font-size;
-$h1-2: 1.75 * $base-font-size;
-$h2: 1.66 * $base-font-size;
-$h2-3: 1.5 * $base-font-size;
-$h3: 1.33 * $base-font-size;
-$h3-4: 1.15 * $base-font-size;
+$h1: 2.5 * $base-font-size;
+$h1-2: 2.25  * $base-font-size;
+$h2: 2 * $base-font-size;
+$h2-3: 1.75 * $base-font-size;
+$h3: 1.5 * $base-font-size;
+$h3-4: 1.25 * $base-font-size;
 $h4: 1 * $base-font-size;
 $h4-5: 0.9 * $base-font-size;
 $h5: 0.8 * $base-font-size;
@@ -76,9 +76,11 @@ $gris-oscuro:              #666;
 $tinta:        #333;
 $negro:                  #000;
 
-$rojo: red;
-$azul: blue;
-$verde: green;
+$amarillo: #EFC164;
+$naranja: #F3835D;
+$rojo: #F35955;
+$azul: #286275;
+$azul-oscuro: #00434C;
 
 // Usos de los colores en web
 

@@ -1,9 +1,9 @@
+// Elementos estándar de html dentro de post
 .post-content {
 	text-align:justify;
 	h2 {
-		text-align:center;
-		border-bottom:1px dotted $gris-claro;
-		margin-top:rhythm(2);
+		border-bottom:1px solid $gris-medio;
+		margin-top:rhythm(3);
 	}
 	p code {
 		background:$tinta;
@@ -27,45 +27,33 @@
 		display:block;
 		margin:0 auto;
 	}
-	blockquote {
-		@include adjust-font-size-to($h4-5);
+}
+
+// Correcciones y actualizaciones
+.actualizado {
+	background:tint($amarillo,50%);
+	border-left:6px solid $amarillo;
+	padding:rhythm(0.25);
+	p {
 		margin:0;
-		padding:rhythm(0.5) rhythm(1);
-		border-top:rhythm(0.5) solid shade($humo, 10%);
-		background:$humo;
-		p:first-child {
-			margin-top:0;
-		}
-		p:last-child {
-			margin-bottom:0;
-		}
-	}
-	.actualizado {
 		@include adjust-font-size-to($h6,0.75);
-		text-align:center;
-		border-bottom:1px solid $negro;
 		font-family:$sans-serif;
 	}
 }
 
+.actualizado-fecha {
+	font-weight:bold;
+}
+
+.correccion {
+	@extend .actualizado;
+}
+
+
+// Notas al pie
 .footnotes {
 	margin-top:rhythm(3);
 	border-top:1px solid $gris-medio;
 	@include adjust-font-size-to($h5);
 	color:$gris-oscuro;
-}
-
-.aviso {
-	font-style:italic;
-	i {
-		@include adjust-font-size-to($h5);
-		color:$gris-medio;
-		&:first-child {
-			margin-right:50px;
-		}
-		&:last-child {
-			margin-left:50px;
-			@include transform(rotate(180deg));
-		}
-	}
 }

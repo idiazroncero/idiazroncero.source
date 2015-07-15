@@ -8,9 +8,10 @@ tags:
 - ligaduras
 - css
 image: /images/ligatura-muestra.png
+actualizacion:
+  fecha: 2015-07-13 00:00:00
+  texto: En la entrada original se daba cuenta de un error en las ligaduras achacado al conversor de Font Squirrell. En realidad hay que usar el conversor avanzado para acceder a todos los sub-sets de la fuente.
 ---
-
-<div class="actualizado"><a href="#correccion">Actualizado el Domingo 12 de Julio a las 18:26 horas</a><br/>Motivo: el error con las ligaduras comentado se debía al modo automático de FontSquirrell</div>
 
 A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas.
 
@@ -64,7 +65,7 @@ Una vez tenemos el codigo, en sitios como [Unicode Table] podemos obtener la ent
 
 Por ejemplo, en Calendas Plus la ligatura __&OElig;__ - que no se activa al escribir "OE" - corresponde al carácter Unicode `U+0152`. Según [Unicode Table][Unicode Table OE], su entidad HTML es `&#338;` o `&OElig;`. Escribimos:
 
-{% prism html %}
+{% prism markup %}
 <p>&#338;</p>
 {% endprism %}
 
@@ -84,15 +85,8 @@ En mi caso, Calendas Plus es una excelente fuente enfocada al medio escrito que 
 
 Para usarla en esta web, la pasé por el conocido [Webfont Kit Generator de FontSquirrell]. <del>En algún punto, desconozco por qué, ligaduras como la que une la ese con la te dejaron de funcionar, pese a ser ligaduras "oficiales" con su entidad HTML bien asentada y su UNICODE asignado.</del>
 
-<div id="correccion"></div>
 
-> __CORRECCIÓN__
->
-> *Para acceder a todas las ligaduras de la fuente tal y como definidas en su formato OpenType hay que usar el generador avanzado de FontSquirrell y hacerse un sub-setting manual.*
->
->*El proceso de escribir este post me hizo investigar un poco más y no ha sido difícil resolverlo. Mi error fue usar el modo automático de FontSquirrell. Es por eso que los siguientes párrafos han quedado obsoletos y este blog ya dispone de todas las ligaduras definidas en la tipografía.*
->
->*Pronto escribiré una entrada explicando cómo conseguirlo.*
+{% include correccion.html text="En realidad, para acceder a todas las ligaduras de la fuente tal y como definidas en su formato OpenType hay que usar el generador avanzado de FontSquirrell y hacer un sub-setting manual." %}
 
 Lo cual nos lleva a otra pequeña frustración: Calendas Plus viene con una tonelada de ligaduras increíbles que muestran en su [página web][Calendas Plus]:
 

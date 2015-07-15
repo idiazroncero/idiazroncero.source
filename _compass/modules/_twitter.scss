@@ -1,0 +1,81 @@
+#twitter-fetcher {
+	@include span(6 no-gutters);
+	@include display-flex();
+	@include align-items(center);
+	@include justify-content(space-between);
+	margin:rhythm(1) 0;
+	border-top:1px dotted $gris-claro;
+	border-bottom:1px dotted $gris-claro;
+	ul {
+		//@include flex();
+		padding:0;
+		// @include border-radius(30px);
+		margin:0;
+		// background:$azul-oscuro;
+		// color:$blanco;
+		// a {
+		// 	@include invert-link();
+		// }
+		li {
+			padding:0;
+			margin:0;
+			list-style-type:none;
+			p {
+				margin:0;
+				@include adjust-font-size-to($h5,1);
+				overflow:hidden; // Enlaces demasiado largos...
+			}
+		}
+	}
+}
+
+.twitter-ul-wrapper {
+	width:75%;
+}
+
+.tweet {
+	//font-style:italic;
+}
+
+.twitter-header {
+	//@include flex();
+	width:10%;
+	a {
+		@include adjust-font-size-to($h1);
+		color:$azul;
+		&:link {
+			color:$azul;
+		}
+		// Correccion de line height
+	}
+}
+
+.twitter-open {
+	width:7.5%;
+}
+
+.twitter-close {
+	width:7.5%;
+}
+
+.twitter-open, .twitter-close {
+	@include adjust-font-size-to(100px,5);
+	color:$gris-claro;
+	margin-top:rhythm(-0.3);
+	position:relative;
+	@include transition(color 0.25s ease-in-out);
+	&:hover, &.hover {
+		color:$azul-oscuro;
+	}
+	a {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
+}
+
+.twitter-reply, .twitter-fav, .twitter-retweet {
+	margin:0 rhythm(1);
+}
