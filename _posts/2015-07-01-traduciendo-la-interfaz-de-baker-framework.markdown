@@ -8,6 +8,7 @@ tags:
 - i18n
 - l10n
 - gist
+excerpt: Baker es un excelente entorno de trabajo (framework) dedicado a la publicación de contenidos digitales en iPad y iPhone. En términos menos abstractos, Baker es una plantilla prediseñada de xCode, el entorno de desarrollo de Apple. Baker viene preparado para que, sin saber ni jota de Swift o Objective-C (los lenguajes con que se programan apps) puedas poner en el App Store desde un simple folleto hasta una extensa librería digital.
 ---
 
 ## Qué es Baker Framework

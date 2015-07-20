@@ -1,30 +1,4 @@
 <header class="header">
-	<div class="social-bar">
-		<div class="social-motto">
-			<p>idiazroncero.com | <span id="social-log">beta 0.5</span></p>
-			<div class="social-motto-log">
-				<p>¡estamos en beta!</p>
-				<p>Últimos cambios:</p>
-				<ul>
-					<li>Rediseño de header</li>
-					<li>Formato de fecha</li>
-					<li>Nueva seccion "actualizado" en posts</li>
-					<li>Twitter</li>
-				</ul>
-			</div>
-		</div>
-		<a class="fa fa-rss-square" href="/rss"></a><!--
-		{% if site.github_username %}
-			--><a href="https://github.com/{{ site.github_username }}" class="fa fa-github" target="_blank"></a><!--
-		{% endif %}
-		{% if site.twitter_username %}
-			--><a href="https://twitter.com/{{ site.twitter_username }}" class="fa fa-twitter" target="_blank"></a><!--
-		{% endif %}
-		{% if site.linkedin_username %}
-			--><a href="https://linkedin.com/{{ site.linkedin_username }}" class="fa fa-linkedin" target="_blank"></a><!--
-		{% endif %}
-		Truco para evitar el problema con inline-block-->
-	</div>
 	<div class="idr" >
 		<h1>
 			<a href="{{ site.baseurl }}/">
@@ -42,22 +16,44 @@
 				o</span>
 			</a>
 		</h1>
-	<span class="idr-motto">Diseño web, periodismo, política y otras parafilias</span>
-</div>
-<!-- <nav class="site-nav">
-	<a href="#" class="menu-icon">
-	</a>
-	<div class="trigger">
-		{% for page in site.pages %}
-			{% if page.title %}
-				<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-			{% endif %}
-		{% endfor %}
+		<span class="idr-motto">Diseño web, periodismo, política y otras parafilias</span>
 	</div>
-	<div class="secciones">
-		{% for category in site.categories %}
-			<p>{{ category | first }}</p>
-		{% endfor %}
-	</div>
-</nav> -->
+
+<!-- 	<nav class="mainmenu">
+		<div class="version">
+			<p id="version-num">beta 0.5</p>
+			<div class="version-log">
+				<p>¡estamos en beta!</p>
+				<p>Últimos cambios:</p>
+				<ul>
+					<li>Rediseño de header</li>
+					<li>Formato de fecha</li>
+					<li>Nueva seccion "actualizado" en posts</li>
+					<li>Twitter</li>
+				</ul>
+			</div>
+		</div>
+			
+		<ul class="mainmenu-secciones">
+			{% for cat in site.categories %}
+				{% assign catname = cat | first %} 
+				<li><a href="/{{catname}}">{% include getslug.html cat1=catname %}</a></li>
+			{% endfor %}
+		</ul>
+
+		<div class="mainmenu-social">
+			<a class="fa fa-rss-square" href="/rss"></a>-->
+		<!--
+		{% if site.github_username %}
+			<a href="https://github.com/{{ site.github_username }}" class="fa fa-github" target="_blank"></a>
+		{% endif %}
+		{% if site.twitter_username %}
+			<a href="https://twitter.com/{{ site.twitter_username }}" class="fa fa-twitter" target="_blank"></a>
+		{% endif %}
+		{% if site.linkedin_username %}
+			<a href="https://linkedin.com/{{ site.linkedin_username }}" class="fa fa-linkedin" target="_blank"></a>
+		{% endif %}
+		Truco para evitar el problema con inline-block
+		</div>
+	</nav> -->
 </header>

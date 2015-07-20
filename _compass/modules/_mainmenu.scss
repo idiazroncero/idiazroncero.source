@@ -1,0 +1,20 @@
+.mainmenu {
+	// @include pie-clearfix();
+	@include display-flex();
+	@include justify-content(space-between);
+	.version {
+
+	}
+}
+
+.mainmenu-social {
+
+}
+
+.mainmenu-secciones {
+	margin:0;
+	padding:0;
+	li {
+		display:inline-block;
+	}
+}

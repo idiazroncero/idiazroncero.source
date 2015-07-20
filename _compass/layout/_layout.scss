@@ -11,7 +11,7 @@ body {
 }
 
 header, .content, footer {
-	@include span(6 no-gutters);
+	@include span(6);
 }
 
 .post-content {

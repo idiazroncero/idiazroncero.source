@@ -1,0 +1,7 @@
+{% for cat2 in site.data.categories %}
+	{% if include.cat1 == cat2.slug %}
+		{{ cat2.name }}
+	{% else %}
+		{{ include.cat1 }}
+	{% endif %}
+{% endfor %}

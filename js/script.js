@@ -7,10 +7,10 @@ $(function(){
 		$('.social-motto-log').hide();
 
 		// Muestra y oculta el changelog
-		$('#social-log').on('mouseenter', function(){
-			$('.social-motto-log').fadeIn(200);
+		$('#version-num').on('mouseenter', function(){
+			$('.version-log').fadeIn(200);
 		}).on('mouseleave', function(){
-			$('.social-motto-log').fadeOut(200);
+			$('.version-log').fadeOut(200);
 		})
 
 		// Twitter Fetcher: último tweet

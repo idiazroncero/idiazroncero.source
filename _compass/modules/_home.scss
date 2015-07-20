@@ -113,39 +113,7 @@
 				max-width:66%;
 				margin:0 auto;
 			}
-			// &:before {
-			// 	content:"—";
-			// 	position:absolute;
-			// 	top:48%;
-			// 	left:rhythm(1);
-			// 	@include transform(translateY(-50%));
-			// 	@include adjust-font-size-to(50px);
-			// 	color:$tinta;
-			// 	@include transition(all 0.25s ease-out);
-			// 	@include text-shadow(-1px -1px 1px rgba($blanco, 0.2));
-			// }
-			// &:after {
-			// 	content:"—";
-			// 	position:absolute;
-			// 	top:48%;
-			// 	right:rhythm(1);
-			// 	@include transform(translateY(-50%));
-			// 	@include adjust-font-size-to(50px,1);
-			// 	color:$tinta;
-			// 	@include transition(all 0.25s ease-out);
-			// 	@include text-shadow(1px -1px 1px rgba($blanco, 0.2));
-			// }
-			// &:hover {
-			// 	&:before {
-			// 		left:rhythm(-1);
-			// 	}
-			// 	&:after {
-			// 		right:rhythm(-1);
-			// 	}
-			// }
 		}
-		// &.post-item-2 {background:$gris_oscuro};
-		// &.post-item-3 {background:$gris_medio}
 		&.post-item-2, &.post-item-3 {
 			.post-texto {
 				padding:rhythm(0.5) rhythm(0.25);
@@ -158,6 +126,7 @@
 // "Estamos en construccion"
 .aviso {
 	font-style:italic;
+	margin:0;
 	i {
 		@include adjust-font-size-to($h5);
 		color:$gris-medio;
