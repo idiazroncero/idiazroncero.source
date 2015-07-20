@@ -28,11 +28,11 @@ $(function(){
 
 		twitterFetcher.fetch(config1);
 
-		$(document).on('mouseenter', '.twitter-close, .twitter-open', function(){
-			$(this).addClass('hover');
-		}).on('mouseleave', '.twitter-close, .twitter-open', function(){
-			$(this).removeClass('hover');
-		});
+		// $(document).on('mouseenter', '.twitter-close, .twitter-open', function(){
+		// 	$(this).addClass('hover');
+		// }).on('mouseleave', '.twitter-close, .twitter-open', function(){
+		// 	$(this).removeClass('hover');
+		// });
 
         // setTimeout(function(){
         // 	console.log('ahora');

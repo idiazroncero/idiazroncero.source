@@ -2,9 +2,9 @@
 	// @include pie-clearfix();
 	@include display-flex();
 	@include justify-content(space-between);
-	.version {
-
-	}
+	border-top:1px solid $gris-medio;
+	border-bottom:1px solid $gris-medio;
+	padding: 0px 0px 2px 0px;
 }
 
 .mainmenu-social {
@@ -16,5 +16,15 @@
 	padding:0;
 	li {
 		display:inline-block;
+		padding: 0 rhythm(0.5);
+		font-weight:bold;
+		&:hover {
+			a {@include invert-link();}
+			background:$negro;
+		}
+		a {
+			@include adjust-font-size-to($h5,0.75);
+			display:block;
+		}
 	}
 }

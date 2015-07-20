@@ -8,15 +8,14 @@ body {
 .container {
 	@include container();
 	background:none !important;
+	> header, > .content, > footer {
+		@include span(6);
+	}
 }
 
-header, .content, footer {
-	@include span(6);
-}
-
-.post-content {
-	@include span(6);
-}
+// .post-content {
+// 	@include span(6 no-gutters);
+// }
 
 // footer {
 // 	@include span(6);

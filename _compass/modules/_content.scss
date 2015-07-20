@@ -1,4 +1,49 @@
 // Elementos estándar de html dentro de post
+
+.post-meta {
+	p {
+		margin-top:0;
+	}
+	//margin-bottom:rhythm(1);
+}
+
+.post-tags {
+	span {
+		@include peque($sans-serif, $h6-7);
+		@include adjust-leading-to(0.75);
+		display:inline-block;
+		background:$azul-oscuro;
+		color:$blanco;
+		font-weight:bold;
+		padding:0 5px;
+		position:relative;
+		margin: 0 rhythm(0.25);
+		@include border-radius(3px);
+		&:before {
+			content:"";
+			position:absolute;
+			width:$base-line-height * 0.56;
+			height:$base-line-height * 0.56;
+			@include transform(rotate(45deg));
+			top:2px;
+			left: -($base-line-height* 0.25);
+			background:$azul-oscuro;
+			@include border-radius(3px);
+			z-index:-1;
+		}
+		&:after {
+			content:"";
+			position:absolute;
+			width:4px;
+			height:4px;
+			background:$blanco;
+			@include border-radius(100%);
+			top:$base-line-height * 0.28;
+			left:-($base-line-height * 0.14);
+		}
+	}
+}
+
 .post-content {
 	text-align:justify;
 	h2 {
@@ -28,6 +73,8 @@
 		margin:0 auto;
 	}
 }
+
+
 
 // Correcciones y actualizaciones
 .actualizado {
