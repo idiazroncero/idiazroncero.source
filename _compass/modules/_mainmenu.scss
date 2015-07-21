@@ -1,5 +1,4 @@
 .mainmenu {
-	// @include pie-clearfix();
 	@include display-flex();
 	@include justify-content(space-between);
 	border-top:1px solid $gris-medio;

@@ -23,10 +23,12 @@ layout: default
   </header>
 
   <article class="post-content">
-    <aside class="actualizado">
-      <strong>Fe de errores</strong>
-        <p><span class="actualizado-fecha">{{ page.actualizacion.fecha | date: "%d %b %Y" }} · </span>{{ page.actualizacion.texto }}</p>
-    </aside>
+    {% if page.actualizacion %}
+      <aside class="actualizado">
+        <strong>Fe de errores</strong>
+          <p><span class="actualizado-fecha">{{ page.actualizacion.fecha | date: "%d %b %Y" }} · </span>{{ page.actualizacion.texto }}</p>
+      </aside>
+    {% endif %}
     {{ content }}
   </article>
   <div id="disqus_thread"></div>
