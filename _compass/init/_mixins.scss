@@ -48,3 +48,7 @@
 	-webkit-font-smoothing:antialiased;
 	font-smooth: always;
 }
+
+@mixin responder-a($point) {
+     @media (min-width: $point) { @content ; }
+}

@@ -42,7 +42,10 @@
 		}
 	}
 	.post-item-2, .post-item-3 {
-		@include span(3 no-gutters);
+		@include span(6 no-gutters);
+		@include responder-a($medio) {
+			@include span(3 no-gutters);
+		}
 		h2 {
 			@include adjust-font-size-to($h3-4,1);
 			font-style:italic;

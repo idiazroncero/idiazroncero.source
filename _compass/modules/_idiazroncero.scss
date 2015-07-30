@@ -8,7 +8,10 @@
 		}
 		span {
 			display:inline-block;
-			@include adjust-font-size-to(6* $base-font-size, 4);
+			@include adjust-font-size-to($h1);
+			@include responder-a($grande) {
+				@include adjust-font-size-to(6* $base-font-size, 4);
+			}
 			font-weight:300;
 		}
 	}

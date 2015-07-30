@@ -1,18 +1,33 @@
 .mainmenu {
 	@include display-flex();
 	@include justify-content(space-between);
+	@include flex-wrap(wrap);
 	border-top:1px solid $gris-medio;
 	border-bottom:1px solid $gris-medio;
 	padding: 0px 0px 2px 0px;
 }
 
-.mainmenu-social {
+.mainmenu .version {
+	display:none;
+	@include responder-a($medio) {
+		display:block;
+	}
+}
 
+.mainmenu-social {
+	width:100%;
+	@include responder-a($medio) {
+		width:auto;
+	}
 }
 
 .mainmenu-secciones {
 	margin:0;
 	padding:0;
+	width:100%;
+	@include responder-a($medio) {
+		width:auto;
+	}
 	li {
 		display:inline-block;
 		padding: 0 rhythm(0.5);

@@ -129,15 +129,9 @@ $susy: (
 // =======================================================
 // 4 - Breakpoints
 
-// De momento copiamos los ejemplos de breakpoint-sass.com
-
-// assume min-width (by default) if only a number
-$medio: 600px;
-$grande: 1000px;
-
-$surfboard-width: max-width 1000px;
-// string tests together within parentheses, assume each item is a feature value pair
-$surfboard-height: (min-height 1000px) (orientation portrait);
+// Sólo dos:
+$medio: 480px; // Por encima de 480
+$grande: 768px; // Por encima de 768
 
 
 
@@ -153,7 +147,6 @@ $surfboard-height: (min-height 1000px) (orientation portrait);
 
 // Otras librerías
 @import "susy";
-// @import "breakpoint"; // Tenemos un problema de dependencias
 
 // Personalizado
 @import "init/mixins";

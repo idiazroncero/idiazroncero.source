@@ -15,5 +15,4 @@ group :jekyll_plugins do
 end
 
 # Para compass
-# gem "breakpoint", "~>2.4.0"
 gem 'susy'

@@ -40,6 +40,10 @@
 .twitter-header {
 	//@include flex();
 	width:10%;
+	display:none;
+	@include responder-a($medio) {
+		display:block;
+	}
 	a {
 		@include adjust-font-size-to($h1);
 		color:$azul;
