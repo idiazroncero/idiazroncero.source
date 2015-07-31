@@ -9,6 +9,8 @@ tags:
 - españa
 - economía
 image: images/emprendedor.jpg
+excerpt: | 
+  Criticar la ideología del emprendizaje tiene sus riesgos: uno siempre se expone a ser considerado un cenizo por sus adalides. Los cenizos somos el palo en la rueda del futuro.Sin embargo, mi experiencia es precisamente la de una de las miles de personas arrojadas contra su voluntad al mundo del autonomato, que no de la autonomía. De ahí la primera gran paradoja. Mientras me peleaba con el Estado social en el que creo, tenía que aguantar los ánimos y jaleos de una afición a la que nunca he querido y que nunca me ha querido.
 ---
 
 Leo, a través de [Miguel Vagalume][miguel], un artículo de eldiario.es titulado *[La ‘quimera’ del emprendimiento fracasa: hasta el 70% de los autónomos desaparecen al cabo de dos años][eldiario]*.
