@@ -2,48 +2,51 @@
 layout: front
 ---
 
-<div class="home">
-
-<!--   <h1 class="page-heading">Entradas</h1> -->
-<!--   <p class="aviso"><i class="fa fa-gears"></i>Estamos en construcción. Disculpen las chapucillas<i class="fa fa-gears"></i></p> -->
-  <ul class="post-list">
-    <!-- PRIMER POST -->
-    {% for post in site.posts limit:1 %}
-      {% if post.image %}
-        <li class="post-item post-item-1 post-item--image">
-          <img src="{{post.image}}" alt="" />
-          <div class="post-texto">
-            <div class="post-texto-inner">
-              <h2>{{ post.title }}</h2>
-              {% if forloop.index == 1 %}
-                <div class="post-separador">~</div>
-              {% endif %}
-              <div class="post-fecha">{{ post.date | date: "%-d %b, %Y" }}</div>
-            </div>
+<section class="main-post">
+  <h1 class="esconder">Última entrada</h1>
+  <!-- PRIMER POST -->
+  {% for post in site.posts limit:1 %}
+    {% if post.image %}
+      <article class="post-item post-item-1 post-item--image">
+        <img src="{{post.image}}" alt="" />
+        <div class="post-texto">
+          <div class="post-texto-inner">
+            <h2>{{ post.title }}</h2>
+            {% if forloop.index == 1 %}
+              <div class="post-separador">~</div>
+            {% endif %}
+            <div class="post-fecha">{{ post.date | date: "%-d %b, %Y" }}</div>
           </div>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"></a>
-        </li>
-      {% else %}
-        <li class="post-item post-item-{{forloop.index}} post-item--plain">
-          <div class="post-texto">
-            <div class="post-texto-inner">
-              <h2>{{ post.title }}</h2>
-              {% if forloop.index == 1 %}
-                <div class="post-separador">~</div>
-              {% endif %}
-              <div class="post-fecha">{{ post.date | date: "%-d %b, %Y" }}</div>
-            </div>
+        </div>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"></a>
+      </article>
+    {% else %}
+      <article class="post-item post-item-{{forloop.index}} post-item--plain">
+        <div class="post-texto">
+          <div class="post-texto-inner">
+            <h2>{{ post.title }}</h2>
+            {% if forloop.index == 1 %}
+              <div class="post-separador">~</div>
+            {% endif %}
+            <div class="post-fecha">{{ post.date | date: "%-d %b, %Y" }}</div>
           </div>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"></a> 
-        </li>
-      {% endif %}
-    {% endfor %}
-    <!-- TWITTER -->
-    <div id="twitter-fetcher"></div>
-    <!-- LOS DOS SIGUIENTES -->
+        </div>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"></a> 
+      </article>
+    {% endif %}
+  {% endfor %}
+</section>
+<!-- TWITTER -->
+<section class="twitter">
+  <h1 class="esconder">Últimos tweets</h1>
+  <div id="twitter-fetcher"></div>
+</section>
+<!-- LOS DOS SIGUIENTES -->
+<section class="next-posts">
+  <h1 class="esconder">Entradas recientes</h1>
     {% for post in site.posts limit:2 offset:1 %}
       {% if site.posts[1].image and site.posts[2].image %}
-        <li class="post-item post-item-{{forloop.index | plus:1}} post-item--image">
+        <article class="post-item post-item-{{forloop.index | plus:1}} post-item--image">
           <img src="{{post.image}}" alt="" />
           <div class="post-texto">
             <div class="post-texto-inner">
@@ -55,9 +58,9 @@ layout: front
             </div>
           </div>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"></a>
-        </li>
+        </article>
       {% else %}
-        <li class="post-item post-item-{{forloop.index | plus:1}} post-item--plain">
+        <article class="post-item post-item-{{forloop.index | plus:1}} post-item--plain">
           <div class="post-texto">
             <div class="post-texto-inner">
               <h2>{{ post.title }}</h2>
@@ -68,11 +71,7 @@ layout: front
             </div>
           </div>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"></a> 
-        </li>
+        </article>
       {% endif %}
     {% endfor %}
-  </ul>
-
-<!--   <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">feed RSS</a></p> -->
-
-</div>
+</section>

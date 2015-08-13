@@ -1,6 +1,6 @@
 ---
 layout: category
-title: politica
+title: Política
 permalink: /politica/
 category: politica
 ---
